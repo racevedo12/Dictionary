@@ -14,7 +14,7 @@ const Word = ( {word} ) =>
             axios.get(url)
             .then( res =>
             {
-                setData(res.data);
+                setData(res.data[0]);
             })
         }
         
