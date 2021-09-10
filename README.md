@@ -1,3 +1,6 @@
+# Description 
+It's a dictionary react app for anyone that wants to search for the definition of a word. Users can see a list of all of the words that they searched and then click on a word to see all the details about that word on a separate page. In the future, I'd like to add a feature so that users can see the meaning of the word that they searched in any different language that they want.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
