@@ -1,19 +1,23 @@
 import React, {useState, useEffect} from "react";
 
-const Word = ( ) =>
+const Word = ( {word} ) =>
 {
     const [data, setData] = useState({});
 
     const getData = () =>
     {
-        const url = "https://api.dictionaryapi.dev/api/v2/entries/en/hello";
-        const axios = require('axios').default;
-
-        axios.get(url)
-        .then( res =>
+        if(word.length >= 1)
         {
-            setData(res.data);
-        })
+            const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}` ;
+            const axios = require('axios').default;
+
+            axios.get(url)
+            .then( res =>
+            {
+                setData(res.data);
+            })
+        }
+        
     };
 
     useEffect( () =>
@@ -22,10 +26,8 @@ const Word = ( ) =>
         // eslint-disable-next-line
     }, [])
 
-    console.log(data);
-
     return (
-        <h3>Word</h3>
+        <h3>{data.word}</h3>
     );
 };
 
