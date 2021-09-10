@@ -1,7 +1,14 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
-const Word = () =>
+const Word = ( {word} ) =>
 {
+    const [data, setData] = useState({});
+
+    const getData = () =>
+    {
+        const url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + word;
+    };
+
     return (
         <h3>Word</h3>
     );

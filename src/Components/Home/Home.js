@@ -6,10 +6,17 @@ import { useState } from "react";
 const Home = () =>
 {
     const [wordList, setWordList] = useState([]);
+    const [inputValue, setInputValue] = useState("");
 
     const handleSubmit = (e) =>
     {
         e.preventDefault();
+        console.log("Submitted");
+    };
+
+    const handleInputChange = (e) =>
+    {
+        setInputValue(e.currentTarget.value);
     };
 
     return (
@@ -21,7 +28,10 @@ const Home = () =>
             </header>
 
             <main className="main-container">
-                <Form handleSubmit={handleSubmit}/>
+                <Form
+                    handleInputChange={handleInputChange}
+                    handleSubmit={handleSubmit}
+                />
             </main>
                 
             
