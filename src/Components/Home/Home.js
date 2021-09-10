@@ -3,14 +3,13 @@ import "./Home.css";
 import Form from "../Form/Form";
 import { useState, useEffect } from "react";
 import WordList from "../WordList/WordList";
-import Word from "../Word/Word";
 
 const Home = () =>
 {
     const [wordList, setWordList] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
-    const [word, setWord] = useState();
+    const [word, setWord] = useState("");
 
     useEffect( () =>
     {
@@ -38,6 +37,7 @@ const Home = () =>
             newWordArr.push(word);
 
             setWordList(newWordArr);
+            setWord("");
     };
 
     const handleSubmit = (e) =>
@@ -61,27 +61,6 @@ const Home = () =>
             addToList();
         }
         
-
-        // const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-        // const axios = require('axios').default;
-
-        // axios.get(url)
-        // .then( res =>
-        // {
-        //     setWordData(res.data[0]);
-        // })
-
-        // wordList.forEach( (word) =>
-        // {
-        //     newWordArr.push(word);
-        // });
-
-        // newWordArr.push(wordData);
-
-        // setWordList(newWordArr);
-        // e.currentTarget[0].value = "";
-        // console.log(wordData)
-
     };
 
     const handleInputChange = (e) =>
@@ -107,7 +86,7 @@ const Home = () =>
 
                 <WordList list={wordList}/>
                 
-                {formSubmitted ? <Word word={word} /> : null}
+                {/* {formSubmitted ? <Word word={word} /> : null} */}
 
             </main>
                 

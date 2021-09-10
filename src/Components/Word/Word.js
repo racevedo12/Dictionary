@@ -16,6 +16,11 @@ const Word = ( {word} ) =>
             {
                 setData(res.data[0]);
             })
+            .catch( (e) =>
+            {
+                console.clear();
+                alert(`${word} is not a valid word`);
+            });
         }
         
     };
@@ -27,7 +32,9 @@ const Word = ( {word} ) =>
     }, [])
 
     return (
-        <h3>{data.word}</h3>
+
+        <h3> {data.word} </h3>
+        
     );
 };
 
