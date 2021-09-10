@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Form from "../Form/Form";
 import { useState } from "react";
+import WordList from "../WordList/WordList";
 
 const Home = () =>
 {
@@ -11,7 +12,6 @@ const Home = () =>
     const handleSubmit = (e) =>
     {
         e.preventDefault();
-        console.log("Submitted");
     };
 
     const handleInputChange = (e) =>
@@ -28,10 +28,14 @@ const Home = () =>
             </header>
 
             <main className="main-container">
+                
                 <Form
                     handleInputChange={handleInputChange}
                     handleSubmit={handleSubmit}
                 />
+
+                <WordList list={wordList} />
+
             </main>
                 
             
