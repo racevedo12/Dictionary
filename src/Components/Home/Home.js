@@ -4,9 +4,8 @@ import Form from "../Form/Form";
 import { useState, useEffect } from "react";
 import WordList from "../WordList/WordList";
 
-const Home = () =>
+const Home = ( {list, setList} ) =>
 {
-    const [wordList, setWordList] = useState([]);
     const [inputValue, setInputValue] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [word, setWord] = useState("");
@@ -29,14 +28,14 @@ const Home = () =>
     {
         const newWordArr = [];
 
-            wordList.forEach( (item) =>
+            list.forEach( (item) =>
             {
                 newWordArr.push(item);
             });
 
             newWordArr.push(word);
 
-            setWordList(newWordArr);
+            setList(newWordArr);
             setWord("");
     };
 
@@ -84,7 +83,7 @@ const Home = () =>
                     
                 />
 
-                <WordList list={wordList}/>
+                <WordList list={list}/>
                 
                 {/* {formSubmitted ? <Word word={word} /> : null} */}
 
