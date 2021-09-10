@@ -1,9 +1,19 @@
 import React from "react";
+import "./Home.css";
 
 const Home = () =>
 {
     return (
-        <h1>Hello</h1>
+
+        <div className="container">
+
+            <div className="header">
+                <h1>Dictionary App</h1>
+            </div>
+            
+
+        </div>
+        
     );
 };
 

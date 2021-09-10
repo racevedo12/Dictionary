@@ -1,0 +1,13 @@
+/* .container
+{
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+} */
+
+.header
+{
+    margin-top: 5%;
+    text-align: center;
+}
