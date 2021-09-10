@@ -9,10 +9,18 @@ const WordList = ( {list} ) =>
         <div>
 
             <h2> Word List </h2>
-            {list.map( (item, idx) =>
+            {list.map( (word, idx) =>
             {
                 return (
-                    <Link key={idx} to={`/word/${item.word}`}> <Word word={item} /> </Link>
+
+                    <div key={idx}>
+                        <h3>
+                            <Link to={`/word/${word}`}> 
+                                <Word word={word}/> 
+                            </Link>
+                        </h3>
+                    </div>
+                    
                 );
                 
             })}
