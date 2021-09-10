@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Form from "../Form/Form";
 
 const Home = () =>
 {
@@ -7,9 +8,14 @@ const Home = () =>
 
         <div className="container">
 
-            <div className="header">
+            <header className="header">
                 <h1>Dictionary App</h1>
-            </div>
+            </header>
+
+            <main className="main-container">
+                <Form />
+            </main>
+                
             
 
         </div>
