@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./show-word-details.css";
 
 const ShowWordDetails = () =>
 {
 
     return (
 
-        <div className="container">
+        <div className="show-details-container">
+
             <Link to="/">Home</Link>
-            <h4>Details</h4>
+
+            <div className="show-word-header">
+                <h1>Dictionary App</h1>
+            </div>
+            
         </div>
         
     );

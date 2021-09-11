@@ -1,0 +1,11 @@
+.show-details-container
+{
+    display: grid;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.show-word-header
+{
+    text-align: center;
+}
