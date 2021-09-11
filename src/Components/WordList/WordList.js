@@ -2,7 +2,7 @@ import React from "react";
 import Word from "../Word/Word";
 import { Link } from "react-router-dom";
 
-const WordList = ( {list} ) =>
+const WordList = ( {list, invalidWord, setInvalidWord} ) =>
 {
     return (
         
@@ -15,8 +15,8 @@ const WordList = ( {list} ) =>
 
                     <div key={idx}>
                         <h3>
-                            <Link to={`/word/${word}`}> 
-                                <Word word={word}/> 
+                            <Link to={`/${word}`}> 
+                                <Word word={word} invalidWords={invalidWord} setInvalidWord={setInvalidWord}/> 
                             </Link>
                         </h3>
                     </div>

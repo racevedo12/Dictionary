@@ -11,7 +11,7 @@ function App() {
 
     <div>
       <Route path="/" exact render= { () => <Home list={wordList} setList={setWordList}/> } />
-      <Route path="/word/:theWord" exact component={ShowWordDetails} />
+      <Route path="/:theWord" exact component={ShowWordDetails} />
     </div>
 
   );

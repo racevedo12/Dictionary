@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Form from "../Form/Form";
-import { useState, useEffect } from "react";
 import WordList from "../WordList/WordList";
 
 const Home = ( {list, setList} ) =>
@@ -9,6 +8,7 @@ const Home = ( {list, setList} ) =>
     const [inputValue, setInputValue] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [word, setWord] = useState("");
+    const [invalidWord, setInvalidWord] = useState("");
 
     useEffect( () =>
     {
@@ -23,6 +23,23 @@ const Home = ( {list, setList} ) =>
 
     }, [inputValue]);
 
+    useEffect( () =>
+    {
+        const newArr = [];
+
+        list.forEach( (word) =>
+        {
+            if(word !== invalidWord)
+            {
+                newArr.push(word);
+            };
+        });
+
+        setList(newArr);
+        setInvalidWord("");
+        
+        // eslint-disable-next-line
+    },[invalidWord])
 
     const addToList = () =>
     {
@@ -83,13 +100,9 @@ const Home = ( {list, setList} ) =>
                     
                 />
 
-                <WordList list={list}/>
-                
-                {/* {formSubmitted ? <Word word={word} /> : null} */}
+                <WordList list={list} invalidWord={invalidWord} setInvalidWord={setInvalidWord}/>
 
             </main>
-                
-            
 
         </div>
         

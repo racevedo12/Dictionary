@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-const Word = ( {word} ) =>
+const Word = ( {word, invalidWord, setInvalidWord} ) =>
 {
     const [data, setData] = useState({});
 
@@ -20,6 +20,8 @@ const Word = ( {word} ) =>
             {
                 console.clear();
                 alert(`${word} is not a valid word`);
+                invalidWord = word;
+                setInvalidWord(invalidWord);
             });
         }
         
