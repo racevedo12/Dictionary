@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-const Word = ( {word, invalidWord, setInvalidWord} ) =>
+const Word = ( {word, invalidWord, setInvalidWord, objList} ) =>
 {
     const [data, setData] = useState({});
 
@@ -15,7 +15,23 @@ const Word = ( {word, invalidWord, setInvalidWord} ) =>
             .then( res =>
             {
                 setData(res.data[0]);
+
+                // const newObjList = [];
+
+                // objList.forEach( (wordObj) =>
+                // {
+                //     newObjList.push(wordObj);
+                // });
+
+                // if(!newObjList.includes(res.data[0]))
+                // {
+                //     newObjList.push(res.data[0]);
+                // }
+
+                // setObjList(newObjList);
+                objList.push(res.data[0]);
             })
+
             .catch( (e) =>
             {
                 console.clear();

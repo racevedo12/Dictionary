@@ -3,7 +3,7 @@ import "./Home.css";
 import Form from "../Form/Form";
 import WordList from "../WordList/WordList";
 
-const Home = ( {list, setList} ) =>
+const Home = ( {list, setList, objList, setObjList} ) =>
 {
     // States for the input of the form, to check if the form was submitted
     // for the word that was from the input value, and the invalid word that was typed in.
@@ -116,7 +116,13 @@ const Home = ( {list, setList} ) =>
                     handleSubmit={handleSubmit}
                 />
 
-                <WordList list={list} invalidWord={invalidWord} setInvalidWord={setInvalidWord}/>
+                <WordList 
+                    list = {list} 
+                    invalidWord = {invalidWord} 
+                    setInvalidWord = {setInvalidWord}
+                    objList = {objList}
+                    setObjList = {setObjList}
+                />
 
             </main>
 
