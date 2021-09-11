@@ -40,6 +40,9 @@ const ShowWordDetails = ( {wordObjList} ) =>
 {/* 
                 <h3>{data.word}</h3>
                 <h3> {data.word} <span> ({data.phonetics[0].text}) </span> </h3>
+
+                // Reference from MDN for audio element.
+                // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
                 <audio src={data.phonetics[0].audio} controls={true} autoPlay={false}></audio> */}
             </div>
 
