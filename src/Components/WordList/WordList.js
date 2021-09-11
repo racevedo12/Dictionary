@@ -27,7 +27,7 @@ const WordList = ( {list, invalidWord, setInvalidWord} ) =>
 
                                 <Word 
                                     word={word} 
-                                    invalidWords={invalidWord} 
+                                    invalidWord={invalidWord} 
                                     setInvalidWord={setInvalidWord}
                                 /> 
 
