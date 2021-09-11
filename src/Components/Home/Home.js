@@ -64,6 +64,7 @@ const Home = ( {list, setList} ) =>
             setWord("");
     };
 
+    // This is another helper method to use it into the handleSubmit function
     const afterFormSubmit = (e) =>
     {
         if(formSubmitted === true)
@@ -86,14 +87,15 @@ const Home = ( {list, setList} ) =>
         }
     };
 
+    // Handles the Form Submit
     const handleSubmit = (e) =>
     {
         e.preventDefault();
 
         afterFormSubmit(e);
-        
     };
 
+    // Handles the value of the input from the form
     const handleInputChange = (e) =>
     {
         setInputValue(e.currentTarget.value);
@@ -112,7 +114,6 @@ const Home = ( {list, setList} ) =>
                 <Form
                     handleInputChange={handleInputChange}
                     handleSubmit={handleSubmit}
-                    
                 />
 
                 <WordList list={list} invalidWord={invalidWord} setInvalidWord={setInvalidWord}/>
