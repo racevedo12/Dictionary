@@ -8,7 +8,7 @@ const Form = ( {handleInputChange, handleSubmit} ) =>
         <form className="form" onSubmit={handleSubmit}>
             
             <input 
-                id="word" 
+                id="input-word" 
                 placeholder="Type in the word that you want to look for" 
                 onChange={handleInputChange}>
             </input>
