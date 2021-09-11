@@ -5,15 +5,20 @@ import WordList from "../WordList/WordList";
 
 const Home = ( {list, setList} ) =>
 {
+    // States for the input of the form, to check if the form was submitted
+    // for the word that was from the input value, and the invalid word that was typed in.
     const [inputValue, setInputValue] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [word, setWord] = useState("");
     const [invalidWord, setInvalidWord] = useState("");
 
+    // Everytime the user types in something, save that into the word state
     useEffect( () =>
     {
         let theWord = "";
 
+        // This is to copy each character of that string and convert it into a word
+        // Instead of just passing a copy of the address of the inputValue state
         inputValue.split("").forEach( (char) =>
         {
             theWord += char;
@@ -23,6 +28,8 @@ const Home = ( {list, setList} ) =>
 
     }, [inputValue]);
 
+    // Everytime that you get an invalid word, check the list of words array
+    // and ignore the invalid word. Set a new array with the valid words.
     useEffect( () =>
     {
         const newArr = [];
@@ -41,6 +48,7 @@ const Home = ( {list, setList} ) =>
         // eslint-disable-next-line
     },[invalidWord])
 
+    // This is a helper function to use it into the handleSubmit function
     const addToList = () =>
     {
         const newWordArr = [];
@@ -56,14 +64,14 @@ const Home = ( {list, setList} ) =>
             setWord("");
     };
 
-    const handleSubmit = (e) =>
+    const afterFormSubmit = (e) =>
     {
-        e.preventDefault();
-
         if(formSubmitted === true)
         {
             
             setFormSubmitted(false);
+
+            // Changes
             e.currentTarget[0].value = "";
             
             addToList();
@@ -76,6 +84,13 @@ const Home = ( {list, setList} ) =>
 
             addToList();
         }
+    };
+
+    const handleSubmit = (e) =>
+    {
+        e.preventDefault();
+
+        afterFormSubmit(e);
         
     };
 
