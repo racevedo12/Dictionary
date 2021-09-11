@@ -105,7 +105,7 @@ const Home = ( {list, setList} ) =>
 
         <div className="container">
 
-            <header className="header">
+            <header className="home-header">
                 <h1>Dictionary App</h1>
             </header>
 
