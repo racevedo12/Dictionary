@@ -38,8 +38,18 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
                     {/* // Reference from MDN for audio element.
                     // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio */}
                     <audio src={data.phonetics[0].audio} controls={true} autoPlay={false}></audio>
-                    
-                </div>     
+                      
+                </div>
+
+                <div className="word-origin">
+                    <h3> Origin: <span id="word-origin-span"> {data.origin} </span> </h3>
+                </div>
+
+                {/* <div className="word-info">
+
+                    <h3> {data.} </h3>
+
+                </div> */}
                 
             </div>
 

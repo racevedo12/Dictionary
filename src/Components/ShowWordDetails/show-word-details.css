@@ -1,13 +1,19 @@
-.show-details-container
+/* *
 {
-    margin-top: 2%;
-    margin-left: 2%;
-}
+    border: 1px solid;
+} */
 
 /* .show-word-header
 {
-    margin-top:
+
 } */
+
+.show-details-container
+{
+    max-width: 100%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
 
 #show-word-title
 {
@@ -15,13 +21,28 @@
     margin-bottom: 3%;
 }
 
-.word-title-info
+.word-title-info, .word-origin
 {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
 }
 
 .word-title-info h3
 {
-    padding-right: 8%;
+    padding-right: 10%;
+}
+
+.word-origin h3
+{
+    margin-right: 6%;
+}
+
+#word-origin-span
+{
+    padding-left: 10%;
+    margin-left: 3%;
+    font-size: medium;
 }
