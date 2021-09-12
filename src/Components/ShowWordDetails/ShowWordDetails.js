@@ -21,29 +21,6 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
     console.log(data);
 
-    // const [data, setData] = useState([]);
-
-    // useEffect( () =>
-    // {
-    //     getData();
-    //     // eslint-disable-next-line
-    // }, []);
-
-    // const getData = () =>
-    // {
-    //     const url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + match.params.theWord ;
-    //     const axios = require('axios').default;
-
-    //     axios.get(url)
-    //     .then( res =>
-    //     {
-    //         setData(res.data[0]);
-    //     });
-
-    // };
-
-    
-
     return (
 
         <div className="show-details-container">
@@ -58,6 +35,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
                 {/* // Reference from MDN for audio element.
                 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio */}
                 <audio src={data.phonetics[0].audio} controls={true} autoPlay={false}></audio>
+                
             </div>
 
             
