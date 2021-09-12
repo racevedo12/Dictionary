@@ -52,7 +52,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
             <main className="main-container">
 
-                <div className="test">
+                <div className="word-details">
 
                     <h2> {data.word} <span> ({data.meanings[0].partOfSpeech}) </span> </h2>
 
