@@ -27,7 +27,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
             <Link to="/">Home</Link>
 
-            <div className="show-word-header">
+            <header className="show-word-header">
 
                 <h1 id="show-word-title">Dictionary App</h1>
 
@@ -41,20 +41,30 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
                       
                 </div>
 
-                <div className="word-origin">
-                    <h3> Origin: <span id="word-origin-span"> {data.origin} </span> </h3>
+                
+                {data.origin ?
+                    <div className="word-origin">
+                        <h3> Origin: <span id="word-origin-span"> {data.origin} </span> </h3>
+                    </div>    
+                : null}
+                
+            </header>
+
+            
+            <main className="main-container">
+
+                <div className="test">
+
+                    <h2> {data.word} <span> ({data.meanings[0].partOfSpeech}) </span> </h2>
+
+                    <div className="word-definition">
+                        <h2> Definition: </h2>
+                        <h3> {data.meanings[0].definitions[0].definition} </h3>
+                    </div>
+
                 </div>
 
-                {/* <div className="word-info">
-
-                    <h3> {data.} </h3>
-
-                </div> */}
-                
-            </div>
-
-            
-            
+            </main>
             
         </div>
         

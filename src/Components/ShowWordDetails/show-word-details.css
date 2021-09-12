@@ -37,12 +37,29 @@
 
 .word-origin h3
 {
-    margin-right: 6%;
+    margin-right: 3%;
 }
 
 #word-origin-span
 {
-    padding-left: 10%;
-    margin-left: 3%;
+    padding-left: 5%;
     font-size: medium;
+}
+
+.test
+{
+    margin-left: 10%;
+}
+
+.word-definition
+{
+    /* margin-left: 2%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.word-definition h2
+{
+
 }
