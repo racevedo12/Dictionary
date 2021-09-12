@@ -52,40 +52,47 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
             <main className="main-container">
 
-                <div className="word-details">
+                {data.meanings.map( (meaning, idx) =>
+                {
+                    return (
+                        <div className="word-details" key={idx}>
 
-                    <h2> {data.word} <span> ({data.meanings[0].partOfSpeech}) </span> </h2>
+                            <h2> {data.word} <span> ({meaning.partOfSpeech}) </span> </h2>
 
-                    <div className="word-attribute">
-                        <h3> Definition: </h3>
-                        <h4 className="word-definition"> {data.meanings[0].definitions[0].definition} </h4>
-                    </div>
+                            <div className="word-attribute">
+                                <h3> Definition: </h3>
+                                <h4 className="word-definition"> {meaning.definitions[0].definition} </h4>
+                            </div>
 
-                    <div className="word-attribute">
-                        <h3> Example: </h3>
-                        <h4> {data.meanings[0].definitions[0].example} </h4>
-                    </div>
+                            <div className="word-attribute">
+                                <h3> Example: </h3>
+                                <h4> {meaning.definitions[0].example} </h4>
+                            </div>
 
-                    {data.meanings[0].definitions[0].synonyms.length >= 1 ? 
-                    
-                        <div className="word-attribute">
-                            <h3> Synonyms: </h3>
-                            <h4 className="word-synonyms"> {data.meanings[0].definitions[0].synonyms.slice(0, 3) + ""} </h4>
+                            {meaning.definitions[0].synonyms.length >= 1 ? 
+                            
+                                <div className="word-attribute">
+                                    <h3> Synonyms: </h3>
+                                    <h4 className="word-synonyms"> {meaning.definitions[0].synonyms.slice(0, 3) + ""} </h4>
+                                </div>
+
+                            :null}
+                            
+
+                            {meaning.definitions[0].antonyms.length >= 1 ? 
+                            
+                                <div className="word-attribute">
+                                    <h3> Antonyms: </h3>
+                                    <h4 className="word-antonyms"> {meaning.definitions[0].antonyms.slice(0, 3) + ""} </h4>
+                                </div>
+
+                            :null}
+
                         </div>
-
-                    :null}
+                    );
                     
+                })}
 
-                    {data.meanings[0].definitions[0].antonyms.length >= 1 ? 
-                    
-                        <div className="word-attribute">
-                            <h3> Antonyms: </h3>
-                            <h4 className="word-antonyms"> {data.meanings[0].definitions[0].antonyms.slice(0, 3) + ""} </h4>
-                        </div>
-
-                    :null}
-
-                </div>
 
             </main>
             
