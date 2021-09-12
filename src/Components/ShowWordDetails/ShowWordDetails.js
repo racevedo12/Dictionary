@@ -29,12 +29,17 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
             <div className="show-word-header">
 
-                <h1>Dictionary App</h1>
-                <h3> {data.word} <span> ({data.phonetics[0].text}) </span> </h3>
+                <h1 id="show-word-title">Dictionary App</h1>
 
-                {/* // Reference from MDN for audio element.
-                // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio */}
-                <audio src={data.phonetics[0].audio} controls={true} autoPlay={false}></audio>
+                <div className="word-title-info">
+
+                    <h3> {data.word} <span> ({data.phonetics[0].text}) </span> </h3>
+
+                    {/* // Reference from MDN for audio element.
+                    // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio */}
+                    <audio src={data.phonetics[0].audio} controls={true} autoPlay={false}></audio>
+                    
+                </div>     
                 
             </div>
 

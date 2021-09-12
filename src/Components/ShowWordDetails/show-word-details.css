@@ -1,11 +1,27 @@
 .show-details-container
 {
-    /* display: grid; */
     margin-top: 2%;
     margin-left: 2%;
 }
 
-.show-word-header
+/* .show-word-header
+{
+    margin-top:
+} */
+
+#show-word-title
 {
     text-align: center;
+    margin-bottom: 3%;
+}
+
+.word-title-info
+{
+    display: flex;
+    justify-content: center;
+}
+
+.word-title-info h3
+{
+    padding-right: 8%;
 }
