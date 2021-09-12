@@ -50,17 +50,22 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
                 
             </header>
 
-            
             <main className="main-container">
 
                 <div className="test">
 
                     <h2> {data.word} <span> ({data.meanings[0].partOfSpeech}) </span> </h2>
 
-                    <div className="word-definition">
-                        <h2> Definition: </h2>
-                        <h3> {data.meanings[0].definitions[0].definition} </h3>
+                    <div className="word-attribute">
+                        <h3> Definition: </h3>
+                        <h4 className="word-definition"> {data.meanings[0].definitions[0].definition} </h4>
                     </div>
+
+                    <div className="word-attribute">
+                        <h3> Example: </h3>
+                        <h4> {data.meanings[0].definitions[0].example} </h4>
+                    </div>
+
 
                 </div>
 
