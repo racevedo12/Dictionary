@@ -66,7 +66,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
                         <h4> {data.meanings[0].definitions[0].example} </h4>
                     </div>
 
-                    {data.meanings[0].definitions[0].synonyms.length > 1 ? 
+                    {data.meanings[0].definitions[0].synonyms.length >= 1 ? 
                     
                         <div className="word-attribute">
                             <h3> Synonyms: </h3>
@@ -75,6 +75,15 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
                     :null}
                     
+
+                    {data.meanings[0].definitions[0].antonyms.length >= 1 ? 
+                    
+                        <div className="word-attribute">
+                            <h3> Antonyms: </h3>
+                            <h4 className="word-antonyms"> {data.meanings[0].definitions[0].antonyms.slice(0, 3) + ""} </h4>
+                        </div>
+
+                    :null}
 
                 </div>
 
