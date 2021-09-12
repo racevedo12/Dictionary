@@ -27,8 +27,13 @@ function App() {
       <Route 
         path="/:theWord" 
         exact
-        render = { () => <ShowWordDetails wordObjList = {wordObjList}/> }
+        render = { (props) => 
+          <ShowWordDetails 
+            wordObjList = {wordObjList}
+            match = {props.match}
+        /> }
       />
+
     </div>
 
   );

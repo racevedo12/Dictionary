@@ -2,9 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./show-word-details.css";
 
-const ShowWordDetails = ( {wordObjList} ) =>
+const ShowWordDetails = ( {wordObjList, match} ) =>
 {
-    console.log(wordObjList)
+
+    const getCorrectData = () =>
+    {
+        for (let wordObj of wordObjList)
+        {   
+            if (match.params.theWord === wordObj.word)
+            {
+                return wordObj;
+            }
+        };
+
+    };
+
+    const data = getCorrectData();
+
+    console.log(data);
+
     // const [data, setData] = useState([]);
 
     // useEffect( () =>
@@ -37,13 +53,11 @@ const ShowWordDetails = ( {wordObjList} ) =>
             <div className="show-word-header">
 
                 <h1>Dictionary App</h1>
-{/* 
-                <h3>{data.word}</h3>
                 <h3> {data.word} <span> ({data.phonetics[0].text}) </span> </h3>
 
-                // Reference from MDN for audio element.
-                // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
-                <audio src={data.phonetics[0].audio} controls={true} autoPlay={false}></audio> */}
+                {/* // Reference from MDN for audio element.
+                // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio */}
+                <audio src={data.phonetics[0].audio} controls={true} autoPlay={false}></audio>
             </div>
 
             
