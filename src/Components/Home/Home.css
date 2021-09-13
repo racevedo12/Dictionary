@@ -11,3 +11,15 @@
     margin-top: 5%;
     text-align: center;
 }
+
+.invalid-words
+{
+    margin: 3% 0 5% 10%;
+}
+
+.invalid-words div
+{
+    margin-left: 4%;
+    position: relative;
+    left: 5px;
+}
