@@ -10,6 +10,12 @@
     margin-left: 2%;
 }
 
+.home-link
+{
+    color: blue;
+    text-decoration: none;
+}
+
 #show-word-title
 {
     text-align: center;

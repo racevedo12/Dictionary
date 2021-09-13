@@ -23,7 +23,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
         <div className="show-details-container">
 
-            <Link to="/">Home</Link>
+            <Link className="home-link" to="/">Home</Link>
 
             <header className="show-word-header">
 
