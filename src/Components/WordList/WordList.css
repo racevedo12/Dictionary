@@ -18,3 +18,26 @@
 {
     color: darkblue;
 }
+
+/* Media Querys */
+
+/* Larger Screens */
+@media (min-width: 2560px)
+{
+
+    .valid-words
+    {
+        margin: 3% 0 2% 16%;
+    }
+
+}
+
+@media (max-width: 768px)
+{
+
+    .valid-words
+    {
+        margin: 3% 0 2% 5%;
+    }
+
+}

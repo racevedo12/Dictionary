@@ -29,3 +29,27 @@
 {
     color: darkred;
 }
+
+/* Media Querys */
+
+/* Larger Screens */
+@media (min-width: 2560px)
+{
+
+    .invalid-words
+    {
+        margin: 3% 0 5% 16%;
+    }
+
+}
+
+/* Smaller Screens */
+@media (max-width: 768px)
+{
+
+    .invalid-words
+    {
+        margin: 3% 0 2% 5%;
+    }
+
+}
