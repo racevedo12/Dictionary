@@ -45,8 +45,6 @@ const WordList = ( {list, invalidWord, setInvalidWord, objList, setObjList, inva
                 
             })}
 
-            <div></div>
-
         </div>
     );
 };
