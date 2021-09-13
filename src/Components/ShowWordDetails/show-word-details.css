@@ -82,3 +82,89 @@
     position: relative;
     right: 2%;
 }
+
+/* Media Querys */
+
+/* Larger Screens */
+
+@media (min-width: 2560px)
+{
+
+    .show-details-container
+    {
+        margin: 0 auto;
+    }
+
+    .main-container
+    {
+        margin-left: 20%;
+    }
+
+    .show-word-header
+    {
+        margin-top: 2%;
+    }
+
+}
+
+/* Smaller Screens */
+
+@media (max-width: 1024px)
+{
+
+    .main-container
+    {
+        margin-left: 0%;
+        margin-right: 30%;
+    }
+    
+}
+
+@media (max-width: 768px)
+{
+
+    .main-container
+    {
+        margin-left: 0%;
+        margin-right: 50%;
+    }
+    
+}
+
+@media (max-width: 425px)
+{
+
+    .main-container
+    {
+        margin: 0 auto;
+    }
+    
+    .show-word-header
+    {
+        margin-left: 5%;
+    }
+
+    .word-attribute
+    {
+        margin-left: 5%;
+    }
+    
+}
+
+@media (max-width: 375px)
+{
+    .show-details-container
+    {
+        margin: 0 auto;
+    }
+
+    .show-word-header
+    {
+        margin-left: 15%;
+    }
+    
+    .word-attribute
+    {
+        margin-left: 5%;
+    }
+}
