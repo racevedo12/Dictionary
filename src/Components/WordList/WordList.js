@@ -2,13 +2,13 @@ import React from "react";
 import Word from "../Word/Word";
 import { Link } from "react-router-dom";
 
-const WordList = ( {list, invalidWord, setInvalidWord, objList, setObjList} ) =>
+const WordList = ( {list, invalidWord, setInvalidWord, objList, setObjList, invalidWordList, setInvalidWordList} ) =>
 {
     return (
         
         <div>
 
-            <h2> Word List </h2>
+            <h2> Valid Words </h2>
 
             {/*
                 Loop through the array of words
@@ -31,6 +31,8 @@ const WordList = ( {list, invalidWord, setInvalidWord, objList, setObjList} ) =>
                                     setInvalidWord = {setInvalidWord}
                                     objList = {objList}
                                     setObjList = {setObjList}
+                                    invalidWordList = {invalidWordList}
+                                    setInvalidWordList = {setInvalidWordList}
                                 /> 
 
                             </Link>
@@ -42,6 +44,8 @@ const WordList = ( {list, invalidWord, setInvalidWord, objList, setObjList} ) =>
                 );
                 
             })}
+
+            <div></div>
 
         </div>
     );

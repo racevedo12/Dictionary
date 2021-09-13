@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-const Word = ( {word, invalidWord, setInvalidWord, objList, setObjList} ) =>
+const Word = ( {word, invalidWord, setInvalidWord, objList, setObjList, invalidWordList, setInvalidWordList} ) =>
 {
     const [data, setData] = useState({});
 
@@ -32,9 +32,20 @@ const Word = ( {word, invalidWord, setInvalidWord, objList, setObjList} ) =>
             .catch( (e) =>
             {
                 console.clear();
-                alert(`${word} is not a valid word`);
+
+                const newInvalidWordList = [];
+
+                invalidWordList.push(word);
+
+                invalidWordList.forEach( (invalidWord) =>
+                {
+                    newInvalidWordList.push(invalidWord);
+                })
+
                 invalidWord = word;
                 setInvalidWord(invalidWord);
+                setInvalidWordList(newInvalidWordList);
+                   
             });
         }
         

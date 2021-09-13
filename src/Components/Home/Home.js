@@ -11,6 +11,7 @@ const Home = ( {list, setList, objList, setObjList} ) =>
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [word, setWord] = useState("");
     const [invalidWord, setInvalidWord] = useState("");
+    const [invalidWordList, setInvalidWordList] = useState([]);
 
     // Everytime the user types in something, save that into the word state
     useEffect( () =>
@@ -122,7 +123,26 @@ const Home = ( {list, setList, objList, setObjList} ) =>
                     setInvalidWord = {setInvalidWord}
                     objList = {objList}
                     setObjList = {setObjList}
+                    invalidWordList = {invalidWordList}
+                    setInvalidWordList = {setInvalidWordList}
                 />
+
+                <div className="invalid-words">
+
+                    <h2> Invalid Words </h2>
+
+                    {invalidWordList.map( (theInvalidWord, idx) =>
+                    {
+                        return(
+
+                            <div key={idx}>
+                                <h3> {theInvalidWord} </h3>
+                            </div>
+                            
+                        );
+                    })}
+
+                </div>
 
             </main>
 
