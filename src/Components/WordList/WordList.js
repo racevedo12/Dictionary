@@ -1,12 +1,13 @@
 import React from "react";
 import Word from "../Word/Word";
 import { Link } from "react-router-dom";
+import "./WordList.css";
 
 const WordList = ( {list, invalidWord, setInvalidWord, objList, setObjList, invalidWordList, setInvalidWordList} ) =>
 {
     return (
         
-        <div>
+        <div className="valid-words">
 
             <h2> Valid Words </h2>
 
