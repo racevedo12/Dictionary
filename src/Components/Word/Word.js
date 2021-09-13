@@ -8,7 +8,7 @@ const Word = ( {word, invalidWord, setInvalidWord, objList, setObjList, invalidW
     {
         if(word.length >= 1)
         {
-            const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}` ;
+            const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word.toLowerCase()}` ;
             const axios = require('axios').default;
 
             axios.get(url)
