@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Route } from "react-router-dom";
-import Home from "./Components/Home/Home";
-import ShowWordDetails from "./Components/ShowWordDetails/ShowWordDetails";
+import Home from "../Home/Home";
+import ShowWordDetails from "../ShowWordDetails/ShowWordDetails";
 
 function App() {
 
