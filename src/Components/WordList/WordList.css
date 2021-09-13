@@ -7,3 +7,14 @@
 {
     margin-left: 4%;
 }
+
+.word-link
+{
+    color: blue;
+    text-decoration: none;
+}
+
+.word-link:hover
+{
+    color: navy;
+}

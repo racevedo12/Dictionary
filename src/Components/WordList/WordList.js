@@ -24,7 +24,7 @@ const WordList = ( {list, invalidWord, setInvalidWord, objList, setObjList, inva
 
                         <h3>
 
-                            <Link to={`/${word}`}>
+                            <Link className="word-link" to={`/${word}`}>
 
                                 <Word 
                                     word = {word} 
