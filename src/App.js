@@ -5,8 +5,9 @@ import ShowWordDetails from "./Components/ShowWordDetails/ShowWordDetails";
 
 function App() {
 
-  const [wordList, setWordList] = useState([]);
+  const [validWordList, setWordList] = useState([]);
   const [wordObjList, setWordObjList] = useState([]);
+  const [invalidWordList, setInvalidWordList] = useState([]);
 
   return (
 
@@ -16,10 +17,12 @@ function App() {
         exact 
         render= { () => 
           <Home 
-            list = {wordList} 
+            list = {validWordList} 
             setList = {setWordList}
             objList = {wordObjList}
             setObjList = {setWordObjList}
+            invalidWordList = {invalidWordList}
+            setInvalidWordList = {setInvalidWordList}
           /> } 
       />
 
