@@ -136,7 +136,7 @@ const Home = ( {list, setList, objList, setObjList} ) =>
                         return(
 
                             <div key={idx}>
-                                <h3> {theInvalidWord} </h3>
+                                <h3 className="invalid-word"> {theInvalidWord} </h3>
                             </div>
                             
                         );

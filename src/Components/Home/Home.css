@@ -19,3 +19,13 @@
     position: relative;
     left: 5px;
 }
+
+.invalid-word
+{
+    color:red;
+}
+
+.invalid-word:hover
+{
+    color: darkred;
+}
