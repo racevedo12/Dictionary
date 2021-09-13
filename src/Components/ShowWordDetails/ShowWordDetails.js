@@ -9,7 +9,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
     {
         for (let wordObj of wordObjList)
         {   
-            if (match.params.theWord === wordObj.word)
+            if (match.params.theWord.toLowerCase() === wordObj.word.toLowerCase())
             {
                 return wordObj;
             }
