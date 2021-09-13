@@ -3,7 +3,7 @@ import "./Home.css";
 import Form from "../Form/Form";
 import WordList from "../WordList/WordList";
 
-const Home = ( {list, setList, objList, setObjList} ) =>
+const Home = ( {list, setList, objList, setObjList, invalidWordList, setInvalidWordList} ) =>
 {
     // States for the input of the form, to check if the form was submitted
     // for the word that was from the input value, and the invalid word that was typed in.
@@ -11,7 +11,6 @@ const Home = ( {list, setList, objList, setObjList} ) =>
     const [formSubmitted, setFormSubmitted] = useState(false);
     const [word, setWord] = useState("");
     const [invalidWord, setInvalidWord] = useState("");
-    const [invalidWordList, setInvalidWordList] = useState([]);
 
     // Everytime the user types in something, save that into the word state
     useEffect( () =>
