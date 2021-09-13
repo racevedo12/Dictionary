@@ -19,8 +19,6 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
     const data = getCorrectData();
 
-    console.log(data);
-
     return (
 
         <div className="show-details-container">
@@ -78,7 +76,6 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
                             :null}
                             
-
                             {meaning.definitions[0].antonyms.length >= 1 ? 
                             
                                 <div className="word-attribute">
