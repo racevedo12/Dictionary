@@ -37,15 +37,15 @@ const Word = ( {word, invalidWord, setInvalidWord, objList, setObjList, invalidW
 
                 invalidWordList.push(word);
 
-                invalidWordList.forEach( (invalidWord) =>
+                invalidWordList.forEach( (theInvalidWord) =>
                 {
-                    newInvalidWordList.push(invalidWord);
-                })
+                    newInvalidWordList.push(theInvalidWord);
+                });
 
                 invalidWord = word;
                 setInvalidWord(invalidWord);
                 setInvalidWordList(newInvalidWordList);
-                   
+
             });
         }
         

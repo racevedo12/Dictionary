@@ -90,7 +90,6 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
                     
                 })}
 
-
             </main>
             
         </div>
