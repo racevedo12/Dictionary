@@ -5,13 +5,16 @@ It's a dictionary react app for anyone that wants to search for the definition o
 ![Screen Shot 2021-09-14 at 11 52 14 AM](https://user-images.githubusercontent.com/58488936/133291548-de9e83ff-bc5f-4b35-bea0-9ab756866ba5.png)
 ![Screen Shot 2021-09-14 at 11 47 06 AM](https://user-images.githubusercontent.com/58488936/133291061-31358973-7f9d-4bbe-87ef-da3473ed321e.png)
 
-## Technologies Used
+## Technologies
 - HTML5
 - CSS
 - Javascript
 - React
 - React-Hooks
 - React-Router-Dom
+
+## Api
+[The Dictionary API Documentation](https://dictionaryapi.dev/)
 
 ## Requirements
 - Node.js
