@@ -2,8 +2,12 @@
 It's a dictionary react app for anyone that wants to search for the definition of a word. Users can see a list of all of the valid or invalid words that they searched and then click on a valid word to see all the details about that word on a separate page. In the future, I'd like to add a feature so that users can see the meaning of the word that they searched in any different language that they want.
 
 ## Screenshots
-![Screen Shot 2021-09-14 at 11 52 14 AM](https://user-images.githubusercontent.com/58488936/133291548-de9e83ff-bc5f-4b35-bea0-9ab756866ba5.png)
-![Screen Shot 2021-09-14 at 11 47 06 AM](https://user-images.githubusercontent.com/58488936/133291061-31358973-7f9d-4bbe-87ef-da3473ed321e.png)
+### Home Page
+![New HomePage](https://user-images.githubusercontent.com/58488936/133321222-a9372d15-4773-4d7c-9aa7-30d54ae224e3.png)
+
+### Word Details Page
+![New WordDetailsPage](https://user-images.githubusercontent.com/58488936/133321228-b69629a2-9e59-45e2-93ff-2cce74b97f49.png)
+
 
 ## Technologies
 - HTML5
