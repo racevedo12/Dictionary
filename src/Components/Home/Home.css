@@ -1,8 +1,15 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-
 /* Default Styles */
+
+body
+{
+    background-image: linear-gradient(
+        to right, rgb(193, 222, 230), rgba(150, 150, 100, 0.4), rgba(236, 209, 120, 0.671)  
+    );
+}
+
 .container
 {
     font-family: 'Montserrat', sans-serif;
