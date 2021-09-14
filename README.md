@@ -27,7 +27,7 @@ It's a dictionary react app for anyone that wants to search for the definition o
 ## Installation/Running the app
 - Fork this repository.
 - Clone your forked repository.
-- Open up your terminal/command line to go to your cloned repository on your local machine. Example: ```cd name-of-cloned-repository/dictionary```
+- Open up your terminal/command line to go to your cloned repository on your local machine. Example: ```cd dictionary/```
 - Then type ```npm install ```
 - To start the server and run the app type ```npm start```
 - If your default browser did not open up, enter this into your browser ```http://localhost:3000/```
