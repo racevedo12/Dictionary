@@ -5,6 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
 
 /* Default Styles */
+
+body
+{
+    background-image: linear-gradient(
+        to right, rgba(221, 238, 124, 0.274), rgba(226, 157, 205, 0.651), rgba(137, 34, 221, 0.541)  
+    );
+}
+
 .show-details-container
 {
     font-family: 'Nunito', sans-serif;
