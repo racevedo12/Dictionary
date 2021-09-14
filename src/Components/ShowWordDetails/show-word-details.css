@@ -1,7 +1,13 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
 
-
+/* Default Styles */
 .show-details-container
 {
+    font-family: 'Nunito', sans-serif;
     max-width: 100%;
     margin-top: 2%;
     margin-left: 2%;
@@ -9,6 +15,7 @@
 
 .home-link
 {
+    font-family: 'Lato', sans-serif;
     color: blue;
     text-decoration: none;
 }
@@ -20,6 +27,7 @@
 
 #show-word-title
 {
+    font-family: 'Lato', sans-serif;
     text-align: center;
     margin-bottom: 4%;
     margin-right: 5%;
@@ -50,14 +58,25 @@
     font-size: medium;
 }
 
+.main-container
+{
+    font-family: 'Poppins', sans-serif;
+}
+
 .word-details
 {
     margin-top: 3%;
     margin-left: 10%;
 }
 
+.word-details h2
+{
+    font-family: 'Inconsolata', monospace;
+}
+
 .word-attribute
 {
+    
     margin-left: 20%;
     display: flex;
     align-items: center;
