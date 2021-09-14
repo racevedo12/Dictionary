@@ -5,6 +5,11 @@ import "./show-word-details.css";
 const ShowWordDetails = ( {wordObjList, match} ) =>
 {
 
+    // Added conditional rendering for all the words attributes in case
+    // that the word does not have any of them.
+    // Like that it would show only the attributes that have some value
+    // instead of an empty attribute. 
+
     const getCorrectData = () =>
     {
         for (let wordObj of wordObjList)
@@ -39,7 +44,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
                       
                 </div>
 
-                
+                {/* Conditional Render for the origin of the word*/}
                 {data.origin ?
                     <div className="word-origin">
                         <h3> Origin: <span id="word-origin-span"> {data.origin} </span> </h3>
@@ -50,6 +55,9 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
             <main className="main-container">
 
+                {/* It loops through the array of meanings which gets all the meanings
+                    of the word in different part of speech. 
+                */}
                 {data.meanings.map( (meaning, idx) =>
                 {
                     return (
@@ -57,6 +65,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
                             <h2> {data.word} <span> ({meaning.partOfSpeech}) </span> </h2>
 
+                            {/* Conditional Render for the definiton of the word*/}
                             {meaning.definitions[0].definition ?
 
                                 <div className="word-attribute">
@@ -65,6 +74,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
                                 </div>
                             :null}
                             
+                            {/* Conditional Render for the example of the word*/}
                             {meaning.definitions[0].example ?
 
                                 <div className="word-attribute">
@@ -74,6 +84,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
                             :null}
                             
+                            {/* Conditional Render for the synonyms*/}
                             {meaning.definitions[0].synonyms.length >= 1 ? 
                             
                                 <div className="word-attribute">
@@ -83,6 +94,7 @@ const ShowWordDetails = ( {wordObjList, match} ) =>
 
                             :null}
                             
+                            {/* Conditional Render for the antonyms */}
                             {meaning.definitions[0].antonyms.length >= 1 ? 
                             
                                 <div className="word-attribute">
