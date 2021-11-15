@@ -53,18 +53,28 @@ body
 
     .invalid-words
     {
-        margin: 3% 0 5% 16%;
+        margin: 5% 0% 5% 2%;
     }
 
 }
 
 /* Smaller Screens */
-@media (max-width: 768px)
+@media (max-width: 1024px)
 {
 
     .invalid-words
     {
-        margin: 3% 0 2% 5%;
+        margin: 3% 0 2% 20%;
+    }
+
+}
+
+@media (max-width: 425px)
+{
+
+    .invalid-words
+    {
+        margin: 3% 0 2% 12%;
     }
 
 }
